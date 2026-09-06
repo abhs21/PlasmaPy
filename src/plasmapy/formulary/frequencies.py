@@ -314,7 +314,7 @@ def plasma_frequency(
 
     For an electron-ion plasma with equal electron and ion number densities,
     the ion plasma frequency is lower than the electron plasma frequency by
-    :math:` \sqrt{m_e / m_i} ` because of the ion's larger mass.
+    :math:`\sqrt{m_e / m_i}` because of the ion's larger mass.
 
     This form of the plasma frequency has units of rad/s, but using the
     ``to_hz`` keyword argument will apply the factor of :math:`1/2π` to
