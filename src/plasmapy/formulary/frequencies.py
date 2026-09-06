@@ -244,51 +244,51 @@ def plasma_frequency(
     charge-density oscillations of a plasma species. It sets the timescale
     for the species' electrostatic response to a perturbation.
 
-    **Aliases:** \`wp_\`
+    **Aliases:** `wp_`
 
-    **Lite Version:** \`~plasmapy.formulary.frequencies.plasma_frequency_lite\`
+    **Lite Version:** `~plasmapy.formulary.frequencies.plasma_frequency_lite`
 
     Parameters
     ----------
-    n : \`~astropy.units.Quantity\`
-        Particle number density in units convertible to m\ :sup:\`-3\`.
+    n : `~astropy.units.Quantity`
+        Particle number density in units convertible to m\ :sup:`-3`.
 
     particle : |particle-like|
-        Representation of the particle species (e.g., \`\`"p+"\`\` for
-        protons, \`\`"D+"\`\` for deuterium, or \`\`"He-4 1+"\`\` for singly
+        Representation of the particle species (e.g., ``"p+"`` for
+        protons, ``"D+"`` for deuterium, or ``"He-4 1+"`` for singly
         ionized helium-4). If no charge state information is provided,
         then the particles are assumed to be singly charged.
 
     Z : real number, optional
         The |charge number| of an ion or neutral atom, if not provided
-        in \`\`particle\`\`.
+        in ``particle``.
 
     mass_numb : integer, optional
-        The mass number of an isotope, if not provided in \`\`particle\`\`.
+        The mass number of an isotope, if not provided in ``particle``.
 
     Returns
     -------
-    \`~astropy.units.Quantity\`
+    `~astropy.units.Quantity`
         The particle plasma frequency in radians per second. Setting
-        keyword \`\`to_hz=True\`\` will apply the factor of :math:\`1/2π\`
+        keyword ``to_hz=True`` will apply the factor of :math:`1/2π`
         and yield a value in Hz.
 
     Raises
     ------
-    \`TypeError\`
-        If \`\`n\`\` is not a \`~astropy.units.Quantity\` or particle is not
+    `TypeError`
+        If ``n`` is not a `~astropy.units.Quantity` or particle is not
         of an appropriate type.
 
-    \`~astropy.units.UnitConversionError\`
-        If \`\`n\`\` is not in correct units.
+    `~astropy.units.UnitConversionError`
+        If ``n`` is not in correct units.
 
-    \`ValueError\`
-        If \`\`n\`\` contains invalid values or particle cannot be used to
+    `ValueError`
+        If ``n`` contains invalid values or particle cannot be used to
         identify a particle or isotope.
 
     Warns
     -----
-    \`~astropy.units.UnitsWarning\`
+    `~astropy.units.UnitsWarning`
         If units are not provided, SI units are assumed.
 
     Notes
@@ -302,11 +302,11 @@ def plasma_frequency(
 
         ω_p = \sqrt{\frac{n q^2}{ε_0 m}}
 
-    where :math:\`n\` is the number density of the species, :math:\`q\` is
-    its charge, :math:\`m\` is its mass, and :math:\`ε_0\` is the vacuum
+    where :math:`n` is the number density of the species, :math:`q` is
+    its charge, :math:`m` is its mass, and :math:`ε_0` is the vacuum
     permittivity. Because the charge is squared, the result is independent
-    of the sign of the charge. In terms of the charge number :math:\`Z\` and
-    the elementary charge :math:\`e\`, the same expression is
+    of the sign of the charge. In terms of the charge number :math:`Z` and
+    the elementary charge :math:`e`, the same expression is
 
     .. math::
 
@@ -314,10 +314,10 @@ def plasma_frequency(
 
     For an electron-ion plasma with equal electron and ion number densities,
     the ion plasma frequency is lower than the electron plasma frequency by
-    :math:\` \sqrt{m_e / m_i} \` because of the ion's larger mass.
+    :math:` \sqrt{m_e / m_i} ` because of the ion's larger mass.
 
     This form of the plasma frequency has units of rad/s, but using the
-    \`\`to_hz\`\` keyword argument will apply the factor of :math:\`1/2π\` to
+    ``to_hz`` keyword argument will apply the factor of :math:`1/2π` to
     give the frequency in Hz.
 
     Examples
@@ -335,7 +335,7 @@ def plasma_frequency(
     <Quantity 2.83930...e+10 Hz>
 
     For user convenience
-    \`~plasmapy.formulary.frequencies.plasma_frequency_lite\` is bound to
+    `~plasmapy.formulary.frequencies.plasma_frequency_lite` is bound to
     this function and can be used as follows.
 
     >>> from plasmapy.particles import Particle
